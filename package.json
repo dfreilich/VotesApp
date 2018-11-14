@@ -1,0 +1,28 @@
+{
+  "name": "votesapp",
+  "version": "1.0.0",
+  "description": "Voting App for CMU's 18-658",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfreilich1/VotesApp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfreilich1/VotesApp/issues"
+  },
+  "homepage": "https://github.com/dfreilich1/VotesApp#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "grunt": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
