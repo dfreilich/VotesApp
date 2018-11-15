@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon",
+    "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
+    "build": "pushd public && ng build --prod && popd",
     "test": "npm test"
   },
   "repository": {
@@ -19,8 +20,14 @@
   },
   "homepage": "https://github.com/dfreilich1/VotesApp#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
     "express": "^4.16.4",
-    "grunt": "^1.0.3"
+    "grunt": "^1.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.12",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"

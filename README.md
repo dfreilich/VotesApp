@@ -32,6 +32,10 @@ npm test
 ```
 to run the test suite.
 
+### Developing
+- When developing, use `npm run-script dev` to run the dev server (with nodemon and ng build). It will automatically display changes on the server side, and will display front-end changes upon reloading. 
+- When building, use `npm build`
+
 ## Technology Stack
 
 * [NodeJs](https://nodejs.org/en/)
