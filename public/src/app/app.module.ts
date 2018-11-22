@@ -4,22 +4,25 @@ import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-];
+import { SettingsComponent } from './settings/settings.component';
+import { ResultsComponent } from './results/results.component';
+import { CandidateListComponent } from './candidate-list/candidate-list.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SettingsComponent,
+    ResultsComponent,
+    CandidateListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     AlertModule.forRoot(),
   ],
   providers: [],
