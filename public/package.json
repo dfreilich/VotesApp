@@ -30,7 +30,8 @@
     "popper.js": "^1.14.5",
     "rxjs": "^6.0.0",
     "tether": "^1.4.5",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "cryptiles": ">=4.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.3",

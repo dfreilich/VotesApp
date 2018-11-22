@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SettingsComponent } from './settings/settings.component';
+import { ResultsComponent } from './results/results.component';
+import { CandidateListComponent } from './candidate-list/candidate-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -15,7 +18,10 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SettingsComponent,
+    ResultsComponent,
+    CandidateListComponent
   ],
   imports: [
     BrowserModule,
