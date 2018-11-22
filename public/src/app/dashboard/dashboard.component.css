@@ -1,0 +1,10 @@
+#dashboard {
+  height: inherit;
+}
+
+#dashboard-content {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

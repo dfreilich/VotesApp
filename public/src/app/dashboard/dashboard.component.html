@@ -1,0 +1,19 @@
+<div id="dashboard" class="d-flex flex-column container align-items-center">
+  <h3 class="text-center">
+    Welcome, {{name}}!
+  </h3>
+  <div id="dashboard-content" class="text-center">
+    <div *ngIf="votingOpen && !voted; else noVote">
+      <p>Ready to vote?</p>
+      <button class="button" type="button">Verify Your Identity, and Vote</button>
+    </div>
+    <ng-template #noVote>
+      <div *ngIf="!votingOpen">
+        <p>Voting hasn't started yet.</p>
+      </div>
+      <div *ngIf="voted">
+        <p>Thank you for voting!</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

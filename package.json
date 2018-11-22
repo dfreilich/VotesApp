@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
     "build": "pushd public && ng build --prod && popd",
-    "test": "npm test"
+    "test": "cd public && ng test --watch=false --browsers=ChromeHeadless"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/dfreilich1/VotesApp#readme",
   "dependencies": {
+    "@angular/cli": "^7.0.6",
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
     "express": "^4.16.4",

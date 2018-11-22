@@ -1,0 +1,22 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+
+html, body {
+  margin: 10px !important;
+  height: 100%;
+
+  app-dashboard {
+    height: 100%;
+  }
+
+  .button {
+    @extend .btn-outline-primary;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+}
+
