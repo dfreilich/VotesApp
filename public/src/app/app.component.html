@@ -1,6 +1,7 @@
 <div id="header" class="container">
   <div class="row justify-content-between">
-    <button id="back-button">
+    <button id="back-button"
+            (click)="goBack()">
       <i class="material-icons">navigate_before</i>
     </button>
     <button type="button"
@@ -15,7 +16,9 @@
 </div>
 <router-outlet></router-outlet>
 <div id="settings-wheel">
-  <i class="material-icons">
-    settings
-  </i>
+  <a routerLink="/settings">
+    <i class="material-icons">
+      settings
+    </i>
+  </a>
 </div>
