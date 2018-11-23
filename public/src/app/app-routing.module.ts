@@ -5,6 +5,7 @@ import { RegistrationComponent } from "./registration/registration.component";
 import { ResultsComponent } from "./results/results.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { CandidateListComponent } from "./candidate-list/candidate-list.component";
+import { CandidateInfoComponent } from "./candidate-info/candidate-info.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'results', component: ResultsComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'candidates', component: CandidateListComponent },
+  { path: 'candidate-info/:id', component: CandidateInfoComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
