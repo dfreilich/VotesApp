@@ -9,18 +9,44 @@ import { Routes, RouterModule, Router, ActivatedRoute } from "@angular/router";
 })
 export class CandidateInfoComponent implements OnInit {
 
-   candidate;
+   candidate; curInfo;
    constructor(private route: ActivatedRoute,
               private router: Router) {
     this.route.params.subscribe(params => {
       this.candidate = params;
+      console.log(this.candidate);
     });
+     let candidateInfo = {
+       1: {
+         name: 'Candidate 1', pos: 'Director of CMU', bio: 'Bio of Candidate 1', endorsements: 'Endorsements of Candidate 1', prevPos: 'Previous positions of Candidate 1'
+       },
+       2: {
+         name: 'Candidate 2', pos: 'Director of CMU', bio: 'Bio of Candidate 2', endorsements: 'Endorsements of Candidate 2', prevPos: 'Previous positions of Candidate 2'
+       },
+       3: {
+         name: 'Candidate 3', pos: 'Director of CMU', bio: 'Bio of Candidate 3', endorsements: 'Endorsements of Candidate 3', prevPos: 'Previous positions of Candidate 3'
+       },
+       4: {
+         name: 'Candidate 4', pos: 'Director of CMU', bio: 'Bio of Candidate 4', endorsements: 'Endorsements of Candidate 4', prevPos: 'Previous positions of Candidate 4'
+       },
+       5: {
+         name: 'Candidate 5', pos: 'Director of CMU', bio: 'Bio of Candidate 5', endorsements: 'Endorsements of Candidate 5', prevPos: 'Previous positions of Candidate 5'
+       },
+       6: {
+         name: 'Candidate 6', pos: 'Director of CMU', bio: 'Bio of Candidate 6', endorsements: 'Endorsements of Candidate 6', prevPos: 'Previous positions of Candidate 6'
+       }
+     };
+     this.curInfo = candidateInfo[this.candidate.id];
   }
 
   ngOnInit() {
 
   }
+  nextCandidate(candidate) {
+     let newID = String(+candidate.id + 1);
 
+    this.router.navigate(['candidate-info', newID]);
+  }
 
 }
 

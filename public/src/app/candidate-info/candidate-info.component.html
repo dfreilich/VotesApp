@@ -1,4 +1,26 @@
-<h2 style="text-align: center;"> Candidate Info </h2>
 
-<h3 style="text-align: center;"> Info for Candidate id: {{candidate.id}} </h3>
+
+<h3 style="text-align: center;"> Candidate {{candidate.id}} Info</h3>
+
+
+<h5 style="text-align: center;"> {{curInfo.name}}, {{curInfo.pos}} </h5>
+
+<div class = "container">
+  <div class = "jumbotron">
+    <p>
+      Personal Bio: {{curInfo.bio}}
+    </p>
+    <p>
+      Endorsements: {{curInfo.endorsements}}
+    </p>
+    <p>
+      Previous Positions: {{curInfo.prevPos}}
+    </p>
+  </div>
+
+</div>
+
+<button  mat-button>Vote For Candidate</button>
+<button (click)="nextCandidate(candidate)" mat-button>Next Candidate</button>
+
 
