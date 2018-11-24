@@ -9,14 +9,14 @@ import { Routes, RouterModule, Router, ActivatedRoute } from "@angular/router";
 })
 export class CandidateInfoComponent implements OnInit {
 
-   candidate; curInfo;
+   candidate; curInfo;candidateInfo;
    constructor(private route: ActivatedRoute,
               private router: Router) {
     this.route.params.subscribe(params => {
       this.candidate = params;
       console.log(this.candidate);
     });
-     let candidateInfo = {
+     this.candidateInfo = {
        1: {
          name: 'Candidate 1', pos: 'Director of CMU', bio: 'Bio of Candidate 1', endorsements: 'Endorsements of Candidate 1', prevPos: 'Previous positions of Candidate 1'
        },
@@ -36,16 +36,15 @@ export class CandidateInfoComponent implements OnInit {
          name: 'Candidate 6', pos: 'Director of CMU', bio: 'Bio of Candidate 6', endorsements: 'Endorsements of Candidate 6', prevPos: 'Previous positions of Candidate 6'
        }
      };
-     this.curInfo = candidateInfo[this.candidate.id];
+     this.curInfo = this.candidateInfo[this.candidate.id];
   }
 
   ngOnInit() {
 
   }
   nextCandidate(candidate) {
-     let newID = String(+candidate.id + 1);
-
-    this.router.navigate(['candidate-info', newID]);
+     let newID = +candidate.id + 1;
+    this.curInfo = this.candidateInfo[newID]
   }
 
 }

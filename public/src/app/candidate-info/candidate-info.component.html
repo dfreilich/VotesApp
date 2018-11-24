@@ -1,6 +1,6 @@
 
 
-<h3 style="text-align: center;"> Candidate {{candidate.id}} Info</h3>
+<h3 style="text-align: center;"> {{curInfo.name}} Info</h3>
 
 
 <h5 style="text-align: center;"> {{curInfo.name}}, {{curInfo.pos}} </h5>
@@ -17,10 +17,12 @@
       Previous Positions: {{curInfo.prevPos}}
     </p>
   </div>
+  <div class = "btn-group">
+    <button  mat-button>Vote For Candidate</button>
+    <button (click)="nextCandidate(candidate)" mat-button> Next Candidate</button>
+  </div>
 
 </div>
 
-<button  mat-button>Vote For Candidate</button>
-<button (click)="nextCandidate(candidate)" mat-button>Next Candidate</button>
 
 
