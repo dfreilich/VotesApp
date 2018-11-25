@@ -21,15 +21,18 @@
   },
   "homepage": "https://github.com/dfreilich1/VotesApp#readme",
   "dependencies": {
+    "@angular-devkit/build-angular": "^0.10.6",
     "@angular/cli": "^7.0.6",
     "body-parser": "^1.18.3",
-    "concurrently": "^4.0.1",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "grunt": "^1.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.3.12",
+    "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "ts-node": "^7.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
