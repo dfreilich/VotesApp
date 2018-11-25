@@ -7,7 +7,8 @@
     "start": "node server.js",
     "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
     "build": "pushd public && ng build --prod && popd",
-    "test": "cd public && ng test --watch=false --browsers=ChromeHeadless"
+    "test": "cd public && ng test --watch=false --browsers=ChromeHeadless",
+    "postinstall": "cd public && npm install && cd .."
   },
   "repository": {
     "type": "git",
