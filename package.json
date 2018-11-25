@@ -4,10 +4,11 @@
   "description": "Voting App for CMU's 18-658",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js &&  dpushd public && ng build --prod && popd",
     "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
-    "build": "pushd public && ng build --prod && popd",
-    "test": "cd public && ng test --watch=false --browsers=ChromeHeadless"
+    "build": "node server.js &&  dpushd public && ng build --prod && popd",
+    "test": "cd public && ng test --watch=false --browsers=ChromeHeadless",
+    "postinstall": "cd public && npm install && ng build --aot --prod && cd .."
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,11 @@
   "dependencies": {
     "@angular/cli": "^7.0.6",
     "body-parser": "^1.18.3",
-    "concurrently": "^4.0.1",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "grunt": "^1.0.3",
     "method-override": "^3.0.0",
-    "mongoose": "^5.3.12",
+    "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
     "path": "^0.12.7"
   },
