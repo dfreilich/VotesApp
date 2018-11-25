@@ -4,7 +4,7 @@
   "description": "Voting App for CMU's 18-658",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js &&  dpushd public && ng build --prod && popd",
     "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
     "build": "node server.js &&  dpushd public && ng build --prod && popd",
     "test": "cd public && ng test --watch=false --browsers=ChromeHeadless",
