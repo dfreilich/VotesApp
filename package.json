@@ -8,7 +8,7 @@
     "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
     "build": "node server.js &&  dpushd public && ng build --prod && popd",
     "test": "cd public && ng test --watch=false --browsers=ChromeHeadless",
-    "postinstall": "cd public && npm install && ng build --aot -prod && cd .."
+    "postinstall": "cd public && npm install && ng build --aot --prod && cd .."
   },
   "repository": {
     "type": "git",
@@ -21,18 +21,16 @@
   },
   "homepage": "https://github.com/dfreilich1/VotesApp#readme",
   "dependencies": {
-    "@angular-devkit/build-angular": "^0.10.6",
     "@angular/cli": "^7.0.6",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "fsevents": "^2.0.1",
     "grunt": "^1.0.3",
-    "jasmine-spec-reporter": "^4.2.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
-    "path": "^0.12.7",
-    "ts-node": "^7.0.1"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
