@@ -1,10 +1,10 @@
 <!-- <p>
   settings works!
 </p> -->
-<h1>Settings</h1>
 <!-- <label>Legal Name</label><label>David</label> -->
-  <p>select spanish: {{selectSpanish}}</p>
-  <p>select english: {{selectEnglish}}</p>
+<p>select spanish: {{selectSpanish}}</p>
+<p>select english: {{selectEnglish}}</p>
+<h1 *ngIf="selectEnglish">Settings</h1>
 <form *ngIf="selectEnglish">
   <div class="form-group row" ng-show="selectEnglish">
     <label for="userName" class="col-sm-2 col-form-label">Legal Name</label>
@@ -18,37 +18,44 @@
         <input class="form-control" type="text" placeholder="03/21/1989" readonly>
     </div>
   </div>
-  <div class="form-group row">
-    <label for="selectLanguage" class="col-sm-2 col-form-label">Select Language</label>
-    <div class="col-sm-5">
-      <button (click)="selectEnglish()">English</button>
-    </div>
-    <div class="col-sm-5">
-      <button (click)="selectSpanish()">Spanish</button>
-    </div>
-  </div>
-</form>
+    <div class="form-group row">
+        <label for="selectLanguage" class="col-sm-2 col-form-label">Language</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" placeholder="English" readonly>
+        </div>
+        <div class="col-sm-4">
+          <button (click)="changeToSpanish()">Cambiar A Español
 
+            </button>
+        </div>
+      </div>
+</form>
+<!-- <button (click)="testbutton()">test</button> -->
+
+
+
+<h1 *ngIf="selectSpanish">Ajustes</h1>
 <form *ngIf="selectSpanish">
   <div class="form-group row">
-      <label for="userName" class="col-sm-2 col-form-label">Legal Name</label>
+      <label for="userName" class="col-sm-2 col-form-label">Nombre Legal</label>
       <div class="col-sm-10">
           <input class="form-control" type="text" placeholder="David" readonly>
       </div>
     </div>
     <div class="form-group row">
-      <label for="userDOB" class="col-sm-2 col-form-label">Date of Birth</label>
+      <label for="userDOB" class="col-sm-2 col-form-label">Cumpleaños</label>
       <div class="col-sm-10">
           <input class="form-control" type="text" placeholder="03/21/1989" readonly>
       </div>
     </div>
     <div class="form-group row">
-      <label for="selectLanguage" class="col-sm-2 col-form-label">Select Language</label>
-      <div class="col-sm-5">
-        <button (click)="selectEnglish()">English</button>
+      <label for="selectLanguage" class="col-sm-2 col-form-label">Idioma</label>
+      <div class="col-sm-6">
+          <input class="form-control" type="text" placeholder="Español" readonly>
       </div>
-      <div class="col-sm-5">
-        <button (click)="selectSpanish()">Spanish</button>
+      <div class="col-sm-4">
+        <button (click)="changeToEnglish()">Change to English
+          </button>
       </div>
     </div>
 </form>

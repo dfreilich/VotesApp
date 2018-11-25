@@ -32,8 +32,12 @@ export class SettingsComponent implements OnInit {
     console.log('change to spanish');
   }
 
-  update() {
-    // console.log(this.selectedItem);
-  }
+  // update() {
+  //   // console.log(this.selectedItem);
+  // }
+
+  // testbutton() {
+  //   console.log('testbutton');
+  // }
 
 }
