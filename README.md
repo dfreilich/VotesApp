@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/dfreilich1/VotesApp/tree/master.svg?style=svg)](https://circleci.com/gh/dfreilich1/VotesApp/tree/master)
+
 # VotesApp
 Voting App, created for CMU's 18-658, Software Engineering and Requirements Design
 
