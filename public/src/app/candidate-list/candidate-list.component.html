@@ -1,13 +1,14 @@
-<h2 style="text-align: center;"> {{position}} </h2>
-<mat-table #table [dataSource]="dataSource" matSort>
+<div *ngIf="!popup" >
+<h2 style="text-align: left;"> {{position}} </h2>
+<mat-table #table [dataSource]="dataSource1" matSort>
   <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'customWidthClass'"> Candidate Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
   </ng-container>
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-    <mat-cell *matCellDef="let row">
-      <button mat-button>Select</button>
+    <mat-cell *matCellDef="let element">
+      <mat-checkbox [checked]="selected === element" (change)="valueChange($event, element)" style="margin-left:2em;"> </mat-checkbox>
     </mat-cell>
   </ng-container>
   <ng-container matColumnDef="seeinfo">
@@ -19,3 +20,29 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
+<h2 style="margin-top:1em; text-align: left;"> {{position2}} </h2>
+<mat-table #table2 [dataSource]="dataSource2" matSort>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'customWidthClass'"> Candidate Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-checkbox [checked]="selected2 === element" (change)="valueChange($event, element)" style="margin-left:2em;"> </mat-checkbox>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="seeinfo">
+    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button (click)="seeInfo(row)" mat-button>See Info</button>
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<div style="text-align: center; margin-top:2em;">
+   <button type="button" (click)="review()" class="btn btn-primary">Review and Submit</button>
+</div>
+</div>

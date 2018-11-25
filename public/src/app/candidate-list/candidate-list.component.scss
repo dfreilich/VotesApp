@@ -1,11 +1,11 @@
-button:active{
+buttonselect{
     background:olive;
     outline: none !important;
     box-shadow: none;
+    background-color: rgba(0,0,0,.20);
 }
 
-button:focus{
-    background:olive;
-    outline: none !important;
-    box-shadow: none;
+
+.customWidthClass{
+   flex: 0 0 10em;
 }
