@@ -10,7 +10,6 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import { AlertDialogComponent } from './alertcomponent/alert.component';
 import { VoteComponent } from './vote/vote.component';
-import {AppRoutingModule} from "./app-routing.module";
 import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';

@@ -48,9 +48,11 @@ export class CandidateListComponent implements OnInit {
    valueChange($event, element) {
         if(this.allCandidates.indexOf(element) <= 4 && $event.checked){
           this.selections["presidency"] = element.id;
+          this.selected = element;
         }
         if(this.allCandidates.indexOf(element) > 4 && $event.checked){
           this.selections["congress"] = element.id;
+          this.selected2 = element;
         }
     }
 
