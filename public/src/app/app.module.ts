@@ -11,6 +11,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
+import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.com
     CandidateListComponent,
     PageNotFoundComponent,
     LoginComponent,
-    RegisterToVoteComponent
+    RegisterToVoteComponent,
+    IdUploadedComponent
   ],
   imports: [
     BrowserModule,

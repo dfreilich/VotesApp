@@ -7,7 +7,8 @@ import { SettingsComponent } from "./settings/settings.component";
 import { CandidateListComponent } from "./candidate-list/candidate-list.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { LoginComponent } from "./login/login.component";
-import {RegisterToVoteComponent} from "./register-to-vote/register-to-vote.component";
+import { RegisterToVoteComponent } from "./register-to-vote/register-to-vote.component";
+import { IdUploadedComponent } from "./id-uploaded/id-uploaded.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { path: 'register-to-vote', component: RegisterToVoteComponent},
+  { path: 'id', component: IdUploadedComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
