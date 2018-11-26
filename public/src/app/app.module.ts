@@ -10,7 +10,7 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import { AlertDialogComponent } from './alertcomponent/alert.component';
 import { VoteComponent } from './vote/vote.component';
-import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -46,7 +46,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatIconModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDatepickerModule,
     MatDialogModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
     MatSelectModule,
     MatFormFieldModule,

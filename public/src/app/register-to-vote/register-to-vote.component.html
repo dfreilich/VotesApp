@@ -1,12 +1,23 @@
-<div>
-  <label>Per Government Regulations, each user must prove their voting eligibility through a valid form of US ID: </label>
-  <nav>
-    <button routerLink="/id">Upload your ID</button>
-  </nav>
-  <label>Alternatively, you can enter your Social Security Number:
-    <input type="password" placeholder="SSN"/>
-    <nav>
-      <button routerLink="/candidates">Verify</button>
-    </nav>
-  </label>
+<div class="container flex-column form">
+  <div id="upload-pic">
+    <p>Per Government Regulations, each user must prove their voting eligibility through a valid form of US ID: </p>
+    <input
+      style="display: none"
+      type="file" (change)="onFileChanged($event)"
+      #fileInput>
+    <button class="button" (click)="fileInput.click()">Select File</button>
+  </div>
+
+  <div id="ssn">
+    <p>Alternatively, you can enter your Social Security Number:</p>
+    <mat-form-field>
+      <input matInput
+             placeholder="Enter your password"
+             [type]="hide ? 'password' : 'text'" required>
+      <mat-icon matSuffix
+                (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <button class="button" routerLink="/dashboard">Next: Prove Your Identity</button>
 </div>

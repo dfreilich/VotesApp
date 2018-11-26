@@ -1,17 +1,9 @@
-div {
-  text-align: center;
-  background-color: #fff;
-  border-radius: 20px;
-  width: 400px;
-  height: 100px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+$margin: 50px;
+
+#upload-pic {
+  margin-bottom: $margin;
 }
 
-button {
-  margin-top: 20px;
+#ssn {
+  margin-top: $margin;
 }
