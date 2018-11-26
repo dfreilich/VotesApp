@@ -8,6 +8,7 @@ import { Routes, RouterModule, Router, ActivatedRoute } from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
   name: string = "David";
+  currentUser: any;
   votingOpen = true;
   voted = false;
 
@@ -17,7 +18,10 @@ export class DashboardComponent implements OnInit {
       if(params.message == "votesuccess"){
         this.voted = true;
       }
-    })};
+    });
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    this.name = this.currentUser;
+  }
 
   ngOnInit() {
   }

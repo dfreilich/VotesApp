@@ -1,23 +1,30 @@
 <div class="container flex-column form">
-  <div id="upload-pic">
-    <p>Per Government Regulations, each user must prove their voting eligibility through a valid form of US ID: </p>
-    <input
-      style="display: none"
-      type="file" (change)="onFileChanged($event)"
-      #fileInput>
-    <button class="button" (click)="fileInput.click()">Select File</button>
-  </div>
+  <form [formGroup]="registrationForm" (ngSubmit)="onFormSubmit()">
+    <div id="upload-pic">
+      <p>Per Government Regulations, each user must prove their voting eligibility through a valid form of US ID: </p>
+      <input
+        style="display: none"
+        type="file"
+        (change)="onFileChange($event)"
+        #fileInput
+        formControlName="id">
+      <input type="hidden" name="fileHidden" formControlName="name"/> <!-- Validation Field -->
+      <button class="button"
+              (click)="fileInput.click()">Select File</button>
+    </div>
 
-  <div id="ssn">
-    <p>Alternatively, you can enter your Social Security Number:</p>
-    <mat-form-field>
-      <input matInput
-             placeholder="Enter your password"
-             [type]="hide ? 'password' : 'text'" required>
-      <mat-icon matSuffix
-                (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </mat-form-field>
-  </div>
-
-  <button class="button" routerLink="/dashboard">Next: Prove Your Identity</button>
+    <div id="ssn">
+      <p>Alternatively, you can enter your Social Security Number:</p>
+      <mat-form-field>
+        <input matInput
+               placeholder="Enter your SSN"
+               [type]="hide ? 'password' : 'text'"
+               formControlName="ssn">
+        <mat-icon matSuffix
+                  (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </div>
+    <br />
+    <button class="button">Next: Prove Your Identity</button>
+  </form>
 </div>
