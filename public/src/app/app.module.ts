@@ -9,6 +9,7 @@ import { ResultsComponent } from './results/results.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SettingsComponent,
     ResultsComponent,
     CandidateListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -6,14 +6,16 @@ import { ResultsComponent } from "./results/results.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { CandidateListComponent } from "./candidate-list/candidate-list.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent,},
   { path: 'results', component: ResultsComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'candidates', component: CandidateListComponent },
   { path: 'registration', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
