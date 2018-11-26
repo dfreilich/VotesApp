@@ -1,7 +1,7 @@
 <div id="login-form" class="container flex-column form">
   <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
     <mat-form-field>
-      <input matInput placeholder="Username" formControlName="username" [errorStateMatcher]="esMatcher">
+      <input matInput placeholder="Username" formControlName="username">
       <mat-error *ngIf="username.hasError('required')">
         Username is required.
       </mat-error>
@@ -11,7 +11,6 @@
              placeholder="Enter your password"
              [type]="hide ? 'password' : 'text'"
              formControlName="password"
-             [errorStateMatcher]="esMatcher"
              required>
       <mat-error *ngIf="password.hasError('required')">Password is required.</mat-error>
       <mat-icon matSuffix

@@ -8,7 +8,7 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>  </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Select a username" formControlName="username" [errorStateMatcher]="esMatcher">
+      <input matInput placeholder="Select a username" formControlName="username">
       <mat-error *ngIf="username.hasError('required')">
         Username is required.
       </mat-error>
@@ -18,7 +18,6 @@
              placeholder="Select a secure password"
              [type]="hide ? 'password' : 'text'"
              formControlName="password"
-             [errorStateMatcher]="esMatcher"
              required>
       <mat-error *ngIf="password.hasError('required')">Password is required.</mat-error>
       <mat-icon matSuffix
