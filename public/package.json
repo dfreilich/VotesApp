@@ -36,8 +36,7 @@
     "popper.js": "^1.14.5",
     "rxjs": "^6.0.0",
     "tether": "^1.4.5",
-    "zone.js": "^0.8.26",
-    "typescript": "^3.1.6"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^7.1.0",
@@ -55,6 +54,7 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "^5.4.1",
     "ts-node": "^7.0.1",
-    "tslint": "^5.11.0"
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   }
 }
