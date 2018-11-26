@@ -1,3 +1,4 @@
+<div *ngIf="!voteDone">
 <h2 style="text-align: center"> Review Your Selections </h2>
 
 
@@ -26,8 +27,14 @@
 </div>
 
 <div style="text-align: center; margin-top:1em;">
-<button class="btn btn-primary" mat-button>Vote For Candidates</button>
+<button (click)="vote()" class="btn btn-primary" mat-button>Vote For Candidates</button>
+</div>
 </div>
 
 
-
+<div *ngIf="voteDone" class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>You have successfully voted for the elections</p>
+  <hr>
+  <p class="mb-0"><button (click)="home()" class="btn btn-primary" mat-button>Home</button></p>
+</div>
