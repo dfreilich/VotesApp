@@ -8,9 +8,12 @@ import { CandidateListComponent } from "./candidate-list/candidate-list.componen
 import { CandidateInfoComponent } from "./candidate-info/candidate-info.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { VoteComponent } from "./vote/vote.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterToVoteComponent } from "./register-to-vote/register-to-vote.component";
+import { IdUploadedComponent } from "./id-uploaded/id-uploaded.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent,},
   { path: 'results', component: ResultsComponent },
   { path: 'settings', component: SettingsComponent },
@@ -18,6 +21,9 @@ const routes: Routes = [
   { path: 'candidate-info/:id', component: CandidateInfoComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'vote', component: VoteComponent },
+  { path: 'login', component: LoginComponent},
+  { path: 'register-to-vote', component: RegisterToVoteComponent},
+  { path: 'id', component: IdUploadedComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

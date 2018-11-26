@@ -11,9 +11,14 @@ import { CandidateInfoComponent } from './candidate-info/candidate-info.componen
 import { AlertDialogComponent } from './alertcomponent/alert.component';
 import { VoteComponent } from './vote/vote.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog} from '@angular/material';
+import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+// import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
+import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PageNotFoundComponent,
     AlertDialogComponent,
     VoteComponent,
+    LoginComponent,
+    RegisterToVoteComponent,
+    IdUploadedComponent,
+    // CandidateInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCheckboxModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
