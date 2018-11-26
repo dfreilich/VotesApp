@@ -23,6 +23,7 @@ import {
   MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -30,6 +31,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
 import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SelfieComponent } from './selfie/selfie.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     RegisterToVoteComponent,
     IdUploadedComponent,
     LandingPageComponent,
+    SelfieComponent,
     // CandidateInfoComponent,
   ],
   imports: [
@@ -63,7 +66,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BrowserAnimationsModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

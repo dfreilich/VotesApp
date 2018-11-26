@@ -12,6 +12,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterToVoteComponent } from "./register-to-vote/register-to-vote.component";
 import { IdUploadedComponent } from "./id-uploaded/id-uploaded.component";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
+import {SelfieComponent} from "./selfie/selfie.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register-to-vote', component: RegisterToVoteComponent},
   { path: 'id', component: IdUploadedComponent},
+  { path: 'selfie', component: SelfieComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
