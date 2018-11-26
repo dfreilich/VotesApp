@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df397989-ce27-4b44-ba9d-d1d7b690b0b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -87,7 +77,7 @@
           <entry key="json" value="5" />
           <entry key="png" value="1" />
           <entry key="scss" value="16" />
-          <entry key="ts" value="48" />
+          <entry key="ts" value="49" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -100,7 +90,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="16" />
-          <entry key="TypeScript" value="48" />
+          <entry key="TypeScript" value="49" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -111,8 +101,8 @@
           <entry key="js" value="5" />
           <entry key="json" value="13" />
           <entry key="scss" value="490" />
-          <entry key="ts" value="3717" />
-          <entry key="txt" value="630" />
+          <entry key="ts" value="3756" />
+          <entry key="txt" value="652" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -120,9 +110,9 @@
           <entry key="HTML" value="1103" />
           <entry key="JSON" value="13" />
           <entry key="JavaScript" value="5" />
-          <entry key="PLAIN_TEXT" value="633" />
+          <entry key="PLAIN_TEXT" value="655" />
           <entry key="SCSS" value="490" />
-          <entry key="TypeScript" value="3717" />
+          <entry key="TypeScript" value="3756" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -153,16 +143,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="62" selection-start-line="28" selection-end-line="62" />
+            <state relative-caret-position="46">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/app/selfie/selfie.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="720">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
@@ -256,6 +258,7 @@
         <option value="$PROJECT_DIR$/public/src/app/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/public/src/app/selfie/selfie.component.html" />
         <option value="$PROJECT_DIR$/public/src/app/selfie/selfie.component.ts" />
+        <option value="$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts" />
       </list>
     </option>
   </component>
@@ -363,7 +366,7 @@
       <updated>1543017927174</updated>
       <workItem from="1543017929164" duration="795000" />
       <workItem from="1543018729022" duration="5717000" />
-      <workItem from="1543217482104" duration="13231000" />
+      <workItem from="1543217482104" duration="13324000" />
     </task>
     <task id="LOCAL-00001" summary="Added landing-page component, made login use matFormField">
       <created>1543217513270</created>
@@ -456,11 +459,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543259594944</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added selfie component">
+      <created>1543260748114</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543260748114</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23036000" />
+    <option name="totallyTimeSpent" value="23129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,7 +508,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Version Control" order="4" weight="0.35264665" />
+      <window_info anchor="right" id="Version Control" order="4" visible="true" weight="0.35264665" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.20958512" />
@@ -547,16 +557,10 @@
     <MESSAGE value="moving devkit and typescript to deps, and putting in outer as well" />
     <MESSAGE value="Making registration flow actually verify submissions" />
     <MESSAGE value="removing unnecessary error matching" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing unnecessary error matching" />
+    <MESSAGE value="Added selfie component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added selfie component" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/node_modules/@angular/material/table/typings/table-data-source.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -891,16 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="true" selection-end-line="30" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/src/app/selfie/selfie.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -911,19 +905,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.ts">
+    <entry file="file://$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="62" selection-start-line="28" selection-end-line="62" />
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="true" selection-end-line="30" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/app/selfie/selfie.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="720">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/src/app/register-to-vote/register-to-vote.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/src/app/selfie/selfie.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
