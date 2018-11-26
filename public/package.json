@@ -22,6 +22,8 @@
     "@angular/platform-browser": "^7.1.0",
     "@angular/platform-browser-dynamic": "^7.1.0",
     "@angular/router": "^7.1.0",
+    "@angular/cdk": "^7.1.0",
+    "@angular/material": "^7.1.0",
     "adm-zip": "^0.4.13",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",

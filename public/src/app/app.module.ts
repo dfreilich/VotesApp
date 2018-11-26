@@ -7,13 +7,18 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ResultsComponent } from './results/results.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
+import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
+import { AlertDialogComponent } from './alertcomponent/alert.component';
+import { VoteComponent } from './vote/vote.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
 import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
-import {MatTableModule, MatIconModule, MatButtonModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,11 +28,14 @@ import {MatTableModule, MatIconModule, MatButtonModule, MatSelectModule} from '@
     SettingsComponent,
     ResultsComponent,
     CandidateListComponent,
+    CandidateInfoComponent,
+    PageNotFoundComponent,
+    AlertDialogComponent,
+    VoteComponent,
     LoginComponent,
     RegisterToVoteComponent,
     IdUploadedComponent,
     // CandidateInfoComponent,
-    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +44,13 @@ import {MatTableModule, MatIconModule, MatButtonModule, MatSelectModule} from '@
     MatTableModule,
     MatIconModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
     MatSelectModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AlertDialogComponent]
 })
 export class AppModule { }
