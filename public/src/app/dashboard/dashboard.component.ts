@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule, Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   name: string = "David";
-  voted = false;
   votingOpen = true;
+  voted = false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private router: Router) {
+    this.route.params.subscribe(params => {
+      if(params.message == "votesuccess"){
+        this.voted = true;
+      }
+    })};
 
   ngOnInit() {
   }
