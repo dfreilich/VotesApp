@@ -26,19 +26,3 @@ console.log(`App listening on port ${port}`);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/dist/index.html'));
 });
-
-let nodemon = require('nodemon');
-
-process
-
-// Handle normal exits
-  .on('exit', (code) => {
-    nodemon.emit('quit');
-    process.exit(code);
-  })
-
-  // Handle CTRL+C
-  .on('SIGINT', () => {
-    nodemon.emit('quit');
-    process.exit(0);
-  });
