@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrationComponent } from './registration.component';
-import {AppModule} from "../app.module";
+import { RegisterToVoteComponent } from './register-to-vote.component';
+import { AppModule} from "../app.module";
 
-describe('RegistrationComponent', () => {
-  let component: RegistrationComponent;
-  let fixture: ComponentFixture<RegistrationComponent>;
+describe('RegisterToVoteComponent', () => {
+  let component: RegisterToVoteComponent;
+  let fixture: ComponentFixture<RegisterToVoteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('RegistrationComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegistrationComponent);
+    fixture = TestBed.createComponent(RegisterToVoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

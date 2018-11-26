@@ -1,0 +1,22 @@
+<div id="login-form" class="container flex-column form">
+  <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Username" formControlName="username">
+      <mat-error *ngIf="username.hasError('required')">
+        Username is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+             placeholder="Enter your password"
+             [type]="hide ? 'password' : 'text'"
+             formControlName="password"
+             required>
+      <mat-error *ngIf="password.hasError('required')">Password is required.</mat-error>
+      <mat-icon matSuffix
+                (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+    <br />
+    <button class="button">Login</button>
+  </form>
+</div>

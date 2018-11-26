@@ -1,0 +1,23 @@
+<div class="container flex-column form">
+  <form [formGroup]="registrationForm" (ngSubmit)="onFormSubmit()">
+    <div id="upload-pic">
+      <p>To prove your identity, please take a Selfie of yourself. Ensure that:</p>
+      <ul>
+        <li>Your head and shoulders appear in the picture</li>
+        <li>You don't have sunglasses blocking your eyes</li>
+      </ul>
+      <input
+        style="display: none"
+        type="file"
+        (change)="onFileChange($event)"
+        #fileInput
+        formControlName="id">
+      <input type="hidden" name="fileHidden" formControlName="name"/> <!-- Validation Field -->
+      <button class="button"
+              (click)="fileInput.click()">Select File</button>
+    </div>
+
+    <br />
+    <button class="button">Finish Registration</button>
+  </form>
+</div>

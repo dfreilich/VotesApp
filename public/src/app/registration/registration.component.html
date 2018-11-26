@@ -1,3 +1,29 @@
-<p>
-  registration works!
-</p>
+<div id="registration-form" class="container flex-column form">
+  <form [formGroup]="registrationForm" (ngSubmit)="onFormSubmit()">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Legal Name" formControlName="name" required/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="DOB" formControlName="dob" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Select a username" formControlName="username">
+      <mat-error *ngIf="username.hasError('required')">
+        Username is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+             placeholder="Select a secure password"
+             [type]="hide ? 'password' : 'text'"
+             formControlName="password"
+             required>
+      <mat-error *ngIf="password.hasError('required')">Password is required.</mat-error>
+      <mat-icon matSuffix
+                (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+    <br />
+    <button class="button">Next: Verify Your Voting Eligibility</button>
+  </form>
+</div>
