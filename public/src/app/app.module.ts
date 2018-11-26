@@ -10,6 +10,7 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     ResultsComponent,
     CandidateListComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterToVoteComponent
   ],
   imports: [
     BrowserModule,
