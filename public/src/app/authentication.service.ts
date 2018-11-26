@@ -30,6 +30,7 @@ export class AuthenticationService {
     //TODO: Make sure he's old enough
     this.users.push({username: value.username, password: value.password, name: value.name});
     localStorage.setItem('currentUser', JSON.stringify(value.name));
+    localStorage.setItem('beingAuthenticated', JSON.stringify(true));
     return observableOf(true);
   }
 }

@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
       }
     });
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    localStorage.removeItem('beingAuthenticated');
     this.name = this.currentUser;
   }
 
