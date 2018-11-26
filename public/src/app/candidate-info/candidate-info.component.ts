@@ -33,6 +33,15 @@ export class CandidateInfoComponent implements OnInit {
        },
        6: {
          id:6, name: 'Candidate 6', pos: 'Director of CMU', bio: 'Bio of Candidate 6', endorsements: 'Endorsements of Candidate 6', prevPos: 'Previous positions of Candidate 6'
+       },
+       7: {
+         id:7, name: 'Candidate 7', pos: 'Director of CMU', bio: 'Bio of Candidate 7', endorsements: 'Endorsements of Candidate 7', prevPos: 'Previous positions of Candidate 7'
+       },
+       8: {
+         id:8, name: 'Candidate 8', pos: 'Director of CMU', bio: 'Bio of Candidate 8', endorsements: 'Endorsements of Candidate 8', prevPos: 'Previous positions of Candidate 8'
+       },
+       9: {
+         id:9, name: 'Candidate 9', pos: 'Director of CMU', bio: 'Bio of Candidate 9', endorsements: 'Endorsements of Candidate 9', prevPos: 'Previous positions of Candidate 9'
        }
      };
      this.candidate = this.candidateInfo[this.candidateID.id];
