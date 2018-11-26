@@ -1,17 +1,21 @@
-<div>
-  <label>Legal Name:
-    <input placeholder="Legal Name"/>
-  </label>
-  <label>DOB:
-    <input placeholder="DOB"/>
-  </label>
-  <label>Username:
-    <input placeholder="Username"/>
-  </label>
-  <label>Password:
-    <input type="password" placeholder="Password"/>
-  </label>
+<div id="registration-form" class="container flex-column form">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Legal Name" required/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="DOB" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Select a username" required/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           placeholder="Pick a secure password"
+           [type]="hide ? 'password' : 'text'" required>
+    <mat-icon matSuffix
+              (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+  <br />
+  <button class="button" routerLink="/register-to-vote">Next: Verify Your Voting Eligibility</button>
 </div>
-<nav>
-  <button routerLink="/login">Create account</button>
-</nav>

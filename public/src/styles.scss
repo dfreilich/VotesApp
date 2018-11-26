@@ -1,6 +1,6 @@
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
-
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 html, body {
   margin: 10px !important;
@@ -17,6 +17,21 @@ html, body {
   h1 {
     font-size: 1.8em;
     text-align: center;
+  }
+}
+
+.form {
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  width: 80%;
+
+  mat-form-field, button {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 10px;
   }
 }
 

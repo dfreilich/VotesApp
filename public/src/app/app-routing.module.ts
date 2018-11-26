@@ -11,9 +11,11 @@ import { VoteComponent } from "./vote/vote.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterToVoteComponent } from "./register-to-vote/register-to-vote.component";
 import { IdUploadedComponent } from "./id-uploaded/id-uploaded.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingPageComponent },
   { path: 'dashboard/:message', component: DashboardComponent,},
   { path: 'dashboard', component: DashboardComponent,},
   { path: 'results', component: ResultsComponent },

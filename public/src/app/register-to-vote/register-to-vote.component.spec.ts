@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterToVoteComponent } from './register-to-vote.component';
+import { AppModule} from "../app.module";
 
 describe('RegisterToVoteComponent', () => {
   let component: RegisterToVoteComponent;
@@ -8,9 +9,8 @@ describe('RegisterToVoteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterToVoteComponent ]
+      imports: [AppModule]
     })
-    .compileComponents();
   }));
 
   beforeEach(() => {

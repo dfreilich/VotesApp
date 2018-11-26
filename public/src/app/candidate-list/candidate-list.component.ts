@@ -4,6 +4,7 @@ import { DataSource } from '@angular/cdk/table';
 import { Routes, RouterModule, Router, ActivatedRoute } from "@angular/router";
 import {MatDialog, MatDialogConfig} from "@angular/material";
 import { AlertDialogComponent } from '../alertcomponent/alert.component';
+import {ErrorMessage} from '../types';
 
 @Component({
   selector: 'app-candidate-list',
@@ -35,7 +36,7 @@ export class CandidateListComponent implements OnInit {
         let tableArr: Candidate[] = [{name: 'Candidate 1' , id: '1'}, {name: 'Candidate 2' , id: '2'}, {name: 'Candidate 3' , id: '3'}, {name: 'Candidate 4' , id: '4'}, {name: 'Candidate 5' , id: '5'}];
         this.dataSource1 = new MatTableDataSource(tableArr);
 
-        let tableArr2: Candidate[] = [{name: 'Candidate 6' , id: '6'}, {name: 'Candidate 7' , id: '7'}, {name: 'Candidate 8' , id: '8'}, {name: 'Candidate 9' , id: '9'}]
+        let tableArr2: Candidate[] = [{name: 'Candidate 6' , id: '6'}, {name: 'Candidate 7' , id: '7'}, {name: 'Candidate 8' , id: '8'}, {name: 'Candidate 9' , id: '9'}];
         this.dataSource2 = new MatTableDataSource(tableArr2);
 
         this.allCandidates = tableArr.concat(tableArr2)
@@ -58,7 +59,7 @@ export class CandidateListComponent implements OnInit {
 
     review() {
       if(this.selections["presidency"] == null || this.selections["congress"] == null) {
-        var data = {"info":null, "status":null}
+        let data: ErrorMessage = {"info":null, "status":null};
         data.info = "you must choose candidates for each position!";
         data.status = "error";
         this.openDialog(data);
@@ -69,14 +70,14 @@ export class CandidateListComponent implements OnInit {
       
     }
 
-    openDialog(data) {
+    openDialog(data: ErrorMessage) {
         this.popup = true;
         const dialogConfig = new MatDialogConfig();
 
         dialogConfig.disableClose = false;
         dialogConfig.autoFocus = true;
         dialogConfig.panelClass= 'my-centered-dialog';
-        dialogConfig.data = data
+        dialogConfig.data = data;
 
         let dialogRef = this.dialog.open(AlertDialogComponent, dialogConfig);
 

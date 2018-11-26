@@ -10,14 +10,26 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import { AlertDialogComponent } from './alertcomponent/alert.component';
 import { VoteComponent } from './vote/vote.component';
-import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog, MatSelectModule} from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import {
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatDialog,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule, MatNativeDateModule
+} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
 import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +46,7 @@ import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
     LoginComponent,
     RegisterToVoteComponent,
     IdUploadedComponent,
+    LandingPageComponent,
     // CandidateInfoComponent,
   ],
   imports: [
@@ -44,9 +57,13 @@ import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
     MatIconModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDatepickerModule,
     MatDialogModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
