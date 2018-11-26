@@ -13,6 +13,7 @@ export class VoteComponent implements OnInit {
   congressid;
   presidency;
   congress;
+  voteDone;
    constructor(private route: ActivatedRoute,
               private router: Router) {
     this.route.params.subscribe(params => {
@@ -55,4 +56,11 @@ export class VoteComponent implements OnInit {
   ngOnInit() {
   }
 
+  vote() {
+  this.voteDone = true;
+  }
+
+  home() {
+  this.router.navigate(['dashboard', "votesuccess"]); 
+  }
 }

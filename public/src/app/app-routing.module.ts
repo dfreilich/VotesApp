@@ -14,6 +14,7 @@ import { IdUploadedComponent } from "./id-uploaded/id-uploaded.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'dashboard/:message', component: DashboardComponent,},
   { path: 'dashboard', component: DashboardComponent,},
   { path: 'results', component: ResultsComponent },
   { path: 'settings', component: SettingsComponent },
