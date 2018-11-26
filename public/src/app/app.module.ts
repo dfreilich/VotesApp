@@ -9,6 +9,7 @@ import { ResultsComponent } from './results/results.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import { AlertDialogComponent } from './alertcomponent/alert.component';
+import { VoteComponent } from './vote/vote.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatTableModule, MatIconModule, MatButtonModule, MatCheckboxModule, MatDialogModule, MatDialog} from '@angular/material';
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CandidateInfoComponent,
     PageNotFoundComponent,
     AlertDialogComponent,
+    VoteComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { SettingsComponent } from "./settings/settings.component";
 import { CandidateListComponent } from "./candidate-list/candidate-list.component";
 import { CandidateInfoComponent } from "./candidate-info/candidate-info.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { VoteComponent } from "./vote/vote.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'candidates', component: CandidateListComponent },
   { path: 'candidate-info/:id', component: CandidateInfoComponent },
   { path: 'registration', component: RegistrationComponent },
+  { path: 'vote', component: VoteComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

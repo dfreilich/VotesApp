@@ -29,8 +29,6 @@ export class CandidateListComponent implements OnInit {
   ngOnInit() {
   		this.displayedColumns = this.columnNames;
       this.createTable();
-      this.selected = -1;
-      this.selected2 = -1;
   }
 
   createTable() {
@@ -49,34 +47,21 @@ export class CandidateListComponent implements OnInit {
 
    valueChange($event, element) {
         if(this.allCandidates.indexOf(element) <= 4 && $event.checked){
-          this.selected = element
+          this.selections["presidency"] = element.id;
         }
         if(this.allCandidates.indexOf(element) > 4 && $event.checked){
-          this.selected2 = element
+          this.selections["congress"] = element.id;
         }
     }
 
     review() {
-      if(this.selected == -1 && this.selected2 == -1){
+      if(this.selections["presidency"] == null || this.selections["congress"] == null) {
         var data = {"info":null, "status":null}
-        data.info = "you must select at least one candidate";
+        data.info = "you must choose candidates for each position!";
         data.status = "error";
         this.openDialog(data);
       }
-      else if(this.selected != -1 && this.selected2 == -1){
-        var data = {"info":null, "status":null}
-        data.info = "you haven't selected a candidate for Congress, you can vote now for Presidency, and come back here to vote for Congress";
-        this.selections["presidency"] = this.selected;
-        data.status = "success";
-        this.openDialog(data)
-      }
-      else if(this.selected2 != -1 && this.selected == -1){
-        var data = {"info":null, "status":null}
-        data.info = "you haven't selected a candidate for Presidency, you can vote now for Congress, and come back here to vote for Presidency";
-        this.selections["presidency"] = this.selected2;
-        data.status = "success";
-        this.openDialog(data);
-      } else {
+      else {
         this.router.navigate(['vote', this.selections]); 
       }
       
