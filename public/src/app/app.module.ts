@@ -10,6 +10,9 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
+import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
 import {MatTableModule, MatIconModule, MatButtonModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
@@ -20,6 +23,9 @@ import {MatTableModule, MatIconModule, MatButtonModule, MatSelectModule} from '@
     SettingsComponent,
     ResultsComponent,
     CandidateListComponent,
+    LoginComponent,
+    RegisterToVoteComponent,
+    IdUploadedComponent,
     // CandidateInfoComponent,
     PageNotFoundComponent
   ],
