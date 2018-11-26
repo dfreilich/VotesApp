@@ -1,11 +1,14 @@
-<div>
-  <label>Username:
-    <input placeholder="Username"/>
-  </label>
-  <label>Password:
-    <input type="password" placeholder="Password"/>
-  </label>
+<div class="container flex-column">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Enter your username"/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           placeholder="Enter your password"
+           [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix
+              (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+  <br />
+  <button class="button" routerLink="/dashboard">Login</button>
 </div>
-<nav>
-  <button routerLink="/dashboard">Login</button>
-</nav>

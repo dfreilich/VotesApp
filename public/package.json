@@ -22,8 +22,6 @@
     "@angular/platform-browser": "^7.1.0",
     "@angular/platform-browser-dynamic": "^7.1.0",
     "@angular/router": "^7.1.0",
-    "@angular/cdk": "^7.1.0",
-    "@angular/material": "^7.1.0",
     "adm-zip": "^0.4.13",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
@@ -36,7 +34,8 @@
     "popper.js": "^1.14.5",
     "rxjs": "^6.0.0",
     "tether": "^1.4.5",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.10.6",
@@ -56,7 +55,6 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "^5.4.1",
     "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "tslint": "^5.11.0"
   }
 }
