@@ -17,14 +17,14 @@ Run
 npm install
 ```
 
-After that, run
+in the root folder, and in the public/ folder (`npm install && cd public && npm install`). After that, run
 ```
 npm start
 ```
 
 To start the server.
 
-After that, go to http://localhost:4200 to access the application.
+Go to http://localhost:8080 to access the application.
 
 ### Running the tests
 
@@ -46,10 +46,13 @@ to run the test suite.
 * [Typescript](https://www.typescriptlang.org/)
 
 ## Helpful Links:
-* **Style Guide** –
+* **Style Guide** – https://ziluzhang.github.io/VotesApp-styleguide/
 
 
 ## Limitations
+* The registration function doesn't verify that it is an image, and compare it to the selfie. 
+* The settings/language translation functionality isn't implemented yet. 
+* The candidates and candidate info is hardcoded, and not accessed from a REST api
 
 
 ## Authors
