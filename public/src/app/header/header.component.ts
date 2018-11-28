@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
   title = 'VotesApp';
   noBackButtonPages = ['/', '/landing', '/dashboard'];
 
-  constructor(private location: Location) {}
+  constructor(private location: Location, private auth: AuthenticationService) {}
 
   ngOnInit() {}
 
@@ -20,11 +21,11 @@ export class HeaderComponent implements OnInit {
   }
 
   displayLogout(): boolean {
-    return false;
+    return this.auth.signedIn();
   }
 
   logout() {
-
+    this.auth.logout();
   }
 
   goBack() {
