@@ -7,6 +7,11 @@
     </button>
     <div *ngIf="!displayBackButton() || !displayLogout()"
          id="filler"></div>
+    <button id="home-button"
+            type="button"
+            class="button"
+            *ngIf="displayHome()"
+            (click)="goToHome()">Home</button>
     <button id="logout-button"
             type="button"
             class="button"
