@@ -1,6 +1,7 @@
 <div *ngIf="!popup" >
 <h2 style="text-align: left;"> {{position}} </h2>
-<mat-table #table [dataSource]="dataSource1" matSort>
+
+  <mat-table #table [dataSource]="dataSource1" matSort>
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'customWidthClass'"> Candidate Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
@@ -14,7 +15,7 @@
   <ng-container matColumnDef="seeinfo">
     <mat-header-cell *matHeaderCellDef> </mat-header-cell>
     <mat-cell *matCellDef="let row">
-      <button (click)="seeInfo(row)" mat-button>See Info</button>
+      <button (click)="seeInfo(row)" mat-button class="button">See Info</button>
     </mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -35,7 +36,7 @@
   <ng-container matColumnDef="seeinfo">
     <mat-header-cell *matHeaderCellDef> </mat-header-cell>
     <mat-cell *matCellDef="let row">
-      <button (click)="seeInfo(row)" mat-button>See Info</button>
+      <button (click)="seeInfo(row)" mat-button class="button">See Info</button>
     </mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -7,9 +7,9 @@ import {AuthenticationService} from './authentication.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private auth: AuthenticationService) {}
+  constructor() {}
 
   loggedIn(): boolean {
-    return this.auth.signedIn();
+    return AuthenticationService.signedIn();
   }
 }

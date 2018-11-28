@@ -11,7 +11,6 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
   title = 'VotesApp';
   noBackButtonPages = ['/', '/landing', '/dashboard'];
-
   constructor(private location: Location, private auth: AuthenticationService, private router: Router) {}
 
   ngOnInit() {}
@@ -22,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   displayLogout(): boolean {
-    return this.auth.signedIn();
+    return AuthenticationService.signedIn();
   }
 
   logout() {

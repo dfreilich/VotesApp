@@ -17,6 +17,6 @@
                 (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
     <br />
-    <button class="button">Login</button>
+    <button [disabled]="loginForm.invalid" class="button">Login</button>
   </form>
 </div>

@@ -24,6 +24,6 @@
                 (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
     <br />
-    <button class="button">Next: Verify Your Voting Eligibility</button>
+    <button class="button" [disabled]="registrationForm.invalid">Next: Verify Your Voting Eligibility</button>
   </form>
 </div>

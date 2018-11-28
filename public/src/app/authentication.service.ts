@@ -8,10 +8,20 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  users: any[] = JSON.parse(localStorage.getItem('users')) || [];
 
   constructor(private router: Router) {
     this.users.push({username: 'admin', password: '1234', name: 'Admin'});
+  }
+  users: any[] = JSON.parse(localStorage.getItem('users')) || [];
+
+  static signedIn(): boolean {
+    const user = localStorage.getItem('currentUser');
+    const registering = localStorage.getItem('registering');
+    return user != null && registering !== 'true';
+  }
+
+  static finishedRegistration() {
+    localStorage.removeItem('registering');
   }
 
   login(value: {username: string, password: string}): Observable<boolean> {
@@ -31,17 +41,12 @@ export class AuthenticationService {
     // TODO: Make sure he's old enough
     this.users.push({username: value.username, password: value.password, name: value.name});
     localStorage.setItem('currentUser', JSON.stringify(value.name));
-    localStorage.setItem('beingAuthenticated', JSON.stringify(true));
+    localStorage.setItem('registering', JSON.stringify(true));
     return observableOf(true);
   }
 
   logout() {
     localStorage.removeItem('currentUser');
     this.router.navigate(['']);
-  }
-
-  signedIn(): boolean {
-    const user = localStorage.getItem('currentUser');
-    return user != null;
   }
 }

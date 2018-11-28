@@ -1,7 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
-import {atLeastOne} from "../at-least-one.directive";
+import {FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {atLeastOne} from '../at-least-one.directive';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-selfie',
@@ -10,20 +11,22 @@ import {atLeastOne} from "../at-least-one.directive";
 })
 export class SelfieComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private cd: ChangeDetectorRef) { }
-
-  ngOnInit() {
-  }
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              private cd: ChangeDetectorRef) { }
 
   registrationForm = this.formBuilder.group({
     id: [null],
     name: [''],
   }, {validator: atLeastOne(Validators.required, ['id', 'name'])});
 
+  ngOnInit() {
+  }
+
   onFileChange(event) {
     const reader = new FileReader();
 
-    if(event.target.files && event.target.files.length) {
+    if (event.target.files && event.target.files.length) {
       const [file] = event.target.files;
       reader.readAsDataURL(file);
 
@@ -46,6 +49,7 @@ export class SelfieComponent implements OnInit {
       return;
     }
 
+    AuthenticationService.finishedRegistration();
     this.router.navigate(['/dashboard']);
   }
 }

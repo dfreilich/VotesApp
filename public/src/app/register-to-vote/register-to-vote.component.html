@@ -25,6 +25,6 @@
       </mat-form-field>
     </div>
     <br />
-    <button class="button">{{buttonString}}</button>
+    <button [disabled]="registrationForm.invalid" class="button">{{buttonString}}</button>
   </form>
 </div>
