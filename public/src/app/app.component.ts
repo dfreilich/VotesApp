@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import {AuthenticationService} from './authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,9 @@ import { Location } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VotesApp';
+  constructor(private auth: AuthenticationService) {}
 
-  constructor(private location: Location){}
-
-  goBack() {
-    this.location.back();
+  loggedIn(): boolean {
+    return this.auth.signedIn();
   }
 }

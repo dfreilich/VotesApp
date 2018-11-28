@@ -16,22 +16,22 @@ import {
   MatButtonModule,
   MatCheckboxModule,
   MatDialogModule,
-  MatDialog,
   MatSelectModule,
   MatFormFieldModule,
   MatInputModule,
   MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
-import {AppRoutingModule} from "./app-routing.module";
+import {AppRoutingModule} from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterToVoteComponent } from './register-to-vote/register-to-vote.component';
 import { IdUploadedComponent } from './id-uploaded/id-uploaded.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SelfieComponent } from './selfie/selfie.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { SelfieComponent } from './selfie/selfie.component';
     IdUploadedComponent,
     LandingPageComponent,
     SelfieComponent,
+    HeaderComponent,
     // CandidateInfoComponent,
   ],
   imports: [

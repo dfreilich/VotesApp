@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js &&  dpushd public && ng build --prod && popd",
-    "dev": "concurrently \"nodemon\" \"pushd public && ng build --watch && popd\"",
+    "dev": "concurrently \"node server.js\" \"pushd public && ng build --watch && popd\"",
     "build": "node server.js &&  dpushd public && ng build --prod && popd",
     "test": "cd public && ng test --watch=false --browsers=ChromeHeadless",
     "postinstall": "cd public && npm install && ng build --aot --prod && cd .."
