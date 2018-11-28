@@ -6,18 +6,25 @@
         <li>Your head and shoulders appear in the picture</li>
         <li>You don't have sunglasses blocking your eyes</li>
       </ul>
-      <input
-        style="display: none"
-        type="file"
-        (change)="onFileChange($event)"
-        #fileInput
-        formControlName="id">
-      <input type="hidden" name="fileHidden" formControlName="name"/> <!-- Validation Field -->
-      <button class="button"
-              (click)="fileInput.click()">Select File</button>
+      <div class="d-flex flex-row">
+        <input
+          style="display: none"
+          type="file"
+          (change)="onFileChange($event)"
+          #fileInput
+          formControlName="id">
+        <input type="hidden" name="fileHidden" formControlName="name"/> <!-- Validation Field -->
+        <button class="button mt-0"
+                (click)="fileInput.click()">Select File</button>
+        <!--For modern browsers-->
+        <i *ngIf="registrationForm.value.id"
+           class="material-icons uploaded">
+          check_circle
+        </i>
+      </div>
     </div>
 
     <br />
-    <button class="button">Finish Registration</button>
+    <button class="button" [disabled]="registrationForm.invalid">Finish Registration</button>
   </form>
 </div>

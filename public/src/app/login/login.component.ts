@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from "../authentication.service";
-import {FormBuilder, Validators} from "@angular/forms";
-import {first} from "rxjs/operators";
-import {Router} from "@angular/router";
+import {AuthenticationService} from '../authentication.service';
+import {FormBuilder, Validators} from '@angular/forms';
+import {first} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -28,15 +28,16 @@ export class LoginComponent implements OnInit {
 
     this.auth.login(this.loginForm.value).pipe(first()).subscribe(
       data => {
-        if(data == true) {
+        if (data === true) {
           this.router.navigate(['/dashboard']);
         } else {
-          //Todo: Have better alert system
+          // Todo: Have better alert system
           alert('Invalid credentials. Try again.');
         }
       },
       error => {
         console.log('invalid creds. Try again');
+        console.log(error);
       });
   }
 

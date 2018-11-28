@@ -1,5 +1,5 @@
 <div id="header" class="container">
-  <div class="row d-flex justify-content-between">
+  <div class="d-flex justify-content-between">
     <button id="back-button"
             *ngIf="displayBackButton()"
             (click)="goBack()">
@@ -16,7 +16,7 @@
             type="button"
             class="button"
             *ngIf="displayLogout()"
-            (click)="logout()">Sign Out</button>
+            (click)="logout()">Logout</button>
   </div>
   <div>
     <h1>

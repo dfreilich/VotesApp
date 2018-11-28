@@ -1,7 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import {FormBuilder, Validators} from '@angular/forms';
 import {atLeastOne} from '../at-least-one.directive';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
+import {AuthenticationService} from '../authentication.service';
 
 @Component({
   selector: 'app-register-to-vote',
@@ -9,22 +10,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./register-to-vote.component.scss']
 })
 export class RegisterToVoteComponent implements OnInit {
+
+  constructor(private formBuilder: FormBuilder, private router: Router, private cd: ChangeDetectorRef) { }
   hide = true;
   id: File;
   initialSetup = true;
-  buttonString = "Next: Prove Your Identity";
+  buttonString = 'Next: Prove Your Identity';
   url = '/selfie';
-
-  constructor(private formBuilder: FormBuilder, private router: Router, private cd: ChangeDetectorRef) { }
-
-  ngOnInit() {
-    this.initialSetup = JSON.parse(localStorage.getItem('beingAuthenticated'));
-    console.log(this.initialSetup);
-    if(this.initialSetup == null) {
-      this.buttonString = "Next: Vote";
-      this.url = '/candidates';
-    }
-  }
 
   registrationForm = this.formBuilder.group({
     id: [null],
@@ -32,10 +24,17 @@ export class RegisterToVoteComponent implements OnInit {
     ssn: ['']
   }, {validator: atLeastOne(Validators.required, ['id', 'name', 'ssn'])});
 
+  ngOnInit() {
+    if (AuthenticationService.signedIn()) {
+      this.buttonString = 'Next: Vote';
+      this.url = '/candidates';
+    }
+  }
+
   onFileChange(event) {
     const reader = new FileReader();
 
-    if(event.target.files && event.target.files.length) {
+    if (event.target.files && event.target.files.length) {
       const [file] = event.target.files;
       reader.readAsDataURL(file);
 

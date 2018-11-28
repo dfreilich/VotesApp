@@ -11,6 +11,7 @@ html, body {
   }
 
   .button {
+    @extend .btn;
     @extend .btn-primary;
   }
 
@@ -33,4 +34,10 @@ html, body {
   button {
     margin-top: 10px;
   }
+
+  .uploaded {
+    font-size: 35px;
+    color: #007bff;
+  }
+
 }
