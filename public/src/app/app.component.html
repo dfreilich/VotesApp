@@ -1,6 +1,7 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
-<div id="settings-wheel">
+<div id="settings-wheel"
+     *ngIf="loggedIn()">
   <a routerLink="/settings">
     <i class="material-icons">
       settings
